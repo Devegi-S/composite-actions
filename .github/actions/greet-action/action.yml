@@ -1,0 +1,12 @@
+name: "Greet Action"
+
+inputs:
+  name:
+    description: "Name to greet"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo "👋 Hello ${{ inputs.name }}"
+    - run: echo "Welcome to GitHub Actions!"
